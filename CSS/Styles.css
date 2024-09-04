@@ -11,6 +11,12 @@ body{
 
 #Dairo{
     text-align: center;
+    font-size: 4rem;
+    font: weight 600px; ;
+    background-image: linear-gradient(to right, rgb(102, 227, 255), rgb(0, 39, 165));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .Presentacion{
@@ -57,7 +63,41 @@ margin-bottom: 10px;
     border: solid red;
 }
 
-footer{
+.redes{
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
 }
+
+
+.redes div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s; /* Transición para el efecto hover */
+}
+
+
+.iconos {
+    width: 50px; /* Ajusta según el tamaño deseado */
+    height: 50px; /* Asegúrate de que las imágenes sean cuadradas */
+    transition: transform 0.3s, filter 0.3s; /* Transición suave para el efecto hover */
+}
+
+.redes div:hover {
+    background-color: #b6b6b6; /* Cambia el color de fondo al pasar el cursor */
+    transform: scale(1.05); /* Agranda ligeramente el contenedor */
+}
+
+.redes div:hover .iconos {
+    transform: scale(1.2); /* Agranda ligeramente el icono */
+    filter: brightness(1.2); /* Aumenta el brillo del icono */
+}
+
+
+
 }
