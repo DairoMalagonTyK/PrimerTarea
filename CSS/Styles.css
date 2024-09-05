@@ -13,7 +13,7 @@ body{
     text-align: center;
     font-size: 4rem;
     font: weight 600px; ;
-    background-image: linear-gradient(to right, rgb(102, 227, 255), rgb(0, 39, 165));
+    background-image: linear-gradient(to right, rgb(5, 45, 146), rgb(125, 210, 244));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -47,21 +47,81 @@ margin-bottom: 10px;
 .Presentacion p{
     text-align: justify;
 }
-
-.carrusel{
+.subtitulo{
+    font-size: 30px;
+    font-weight: 490;
+    text-align: center;
+    margin: 5px;
+}
+.carrusel {
     display: flex;
     flex-wrap: nowrap;
-    overflow: scroll;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px; /* Menos espacio entre elementos en pantallas pequeñas */
+    padding: 10px; /* Espaciado interno reducido */
 }
 
-.elemento{
-    flex: 1 0 auto;
-    margin: 0 50px;
-    background-color: aqua;
-    width: 350px;
-    height: 500px;
-    border: solid red;
+.elemento {
+    flex: 0 0 auto;
+    width: 250px; /* Tamaño reducido para pantallas pequeñas */
+    height: 400px; /* Tamaño reducido para pantallas pequeñas */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
 }
+
+#masdemi{
+    background-image: url('../IMG/maemi.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+#hobbies{
+    background-image: url('../IMG/hobbies.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+#study{
+    background-image: url('../IMG/study.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+#fav{
+    background-image: url('../IMG/fav.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.boton-carrusel {
+    position: absolute;
+    bottom: 10px; /* Ajustado para pantallas pequeñas */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 16px; /* Tamaño del botón reducido */
+    font-size: 14px; /* Fuente más pequeña */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.boton-carrusel:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translate(-50%, -5px);
+}
+
+
 
 .redes{
     display: grid;
@@ -78,24 +138,24 @@ margin-bottom: 10px;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, background-color 0.3s; /* Transición para el efecto hover */
+    transition: transform 0.3s, background-color 0.3s; 
 }
 
 
 .iconos {
-    width: 50px; /* Ajusta según el tamaño deseado */
-    height: 50px; /* Asegúrate de que las imágenes sean cuadradas */
-    transition: transform 0.3s, filter 0.3s; /* Transición suave para el efecto hover */
+    width: 50px;
+    height: 50px; 
+    transition: transform 0.3s, filter 0.3s; 
 }
 
 .redes div:hover {
-    background-color: #b6b6b6; /* Cambia el color de fondo al pasar el cursor */
-    transform: scale(1.05); /* Agranda ligeramente el contenedor */
+    background-color: #b6b6b6; 
+    transform: scale(1.05); 
 }
 
 .redes div:hover .iconos {
-    transform: scale(1.2); /* Agranda ligeramente el icono */
-    filter: brightness(1.2); /* Aumenta el brillo del icono */
+    transform: scale(1.2); 
+    filter: brightness(1.2); 
 }
 
 
